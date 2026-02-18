@@ -1,6 +1,6 @@
 // src/App.jsx
 import './App.css';
-import EventDetails from './components/EventDetails';
+import EventBooking from './components/EventBooking';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <section>
           <div className="container">
             <h2>Задача 1: Бронирование билетов</h2>
-            <EventDetails title="Concert of the Year" date="2023-12-01" location="City Arena" />
+            <EventBooking />
           </div>
         </section>
       </main>

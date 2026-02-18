@@ -1,0 +1,11 @@
+.seat {
+  padding: 1rem;
+  background: #aaa;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.selected {
+  background: #4caf50;
+  color: white;
+}
