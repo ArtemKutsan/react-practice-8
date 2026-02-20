@@ -54,6 +54,18 @@ const SeatSelector = ({ event }) => {
           </button>
         ))}
       </div>
+
+      <h3>Выбранные места:</h3>
+      {event.seats.some((seat) => seat.isSelected) ? (
+        <p>
+          {event.seats
+            .filter((seat) => seat.isSelected)
+            .map((seat) => event.seats.indexOf(seat) + 1)
+            .join(', ')}
+        </p>
+      ) : (
+        <p>Нет выбранных мест</p>
+      )}
     </>
   );
 };
