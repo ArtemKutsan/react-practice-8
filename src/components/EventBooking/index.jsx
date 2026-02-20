@@ -3,6 +3,7 @@ import styles from './EventBooking.module.css';
 import { useContext, useState } from 'react';
 import EventsContext from '../../context/events-context';
 import EventDetails from '../EventDetails';
+import SeatSelector from '../SeatSelector';
 
 const EventBooking = () => {
   const { data } = useContext(EventsContext);
@@ -55,6 +56,7 @@ const EventBooking = () => {
       {event && (
         <>
           <EventDetails title={event.title} date={eventsDay.date} />
+          <SeatSelector event={event} />
         </>
       )}
     </div>
