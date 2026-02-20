@@ -1,12 +1,11 @@
 // src/components/EventDetails/index.jsx
 import styles from './EventDetails.module.css';
 
-const EventDetails = ({ title, date, location }) => {
+const EventDetails = ({ title, date }) => {
   return (
     <>
       <h2>{title}</h2>
-      <p>Дата: {date}</p>
-      <p>Место: {location}</p>
+      <p>Дата: {date.toLocaleDateString()}</p>
     </>
   );
 };

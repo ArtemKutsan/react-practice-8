@@ -51,6 +51,12 @@ const EventBooking = () => {
           </select>
         )}
       </form>
+
+      {event && (
+        <>
+          <EventDetails title={event.title} date={eventsDay.date} />
+        </>
+      )}
     </div>
   );
 };
