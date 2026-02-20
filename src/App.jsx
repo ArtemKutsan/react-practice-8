@@ -1,5 +1,6 @@
 // src/App.jsx
 import './App.css';
+import EventsProvider from './components/EventsProvider';
 import EventBooking from './components/EventBooking';
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
         <section>
           <div className="container">
             <h2>Задача 1: Бронирование билетов</h2>
-            <EventBooking />
+            <EventsProvider>
+              <EventBooking />
+            </EventsProvider>
           </div>
         </section>
       </main>

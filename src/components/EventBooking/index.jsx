@@ -1,14 +1,28 @@
 // src/components/EventBooking/index.jsx
 import styles from './EventBooking.module.css';
-import EventDetails from '../EventDetails';
-import SeatSelector from '../SeatSelector';
+import { useContext, useState } from 'react';
+import EventsContext from '../../context/events-context';
 
 const EventBooking = () => {
+  const { data } = useContext(EventsContext);
+
   return (
-    <div style={{ backgroundColor: '#eee', padding: '1rem 2rem', borderRadius: '1rem' }}>
-      <EventDetails title="Concert of the Year" date="2023-12-01" location="City Arena" />
-      <SeatSelector />
+    <div style={{ backgroundColor: '#eee', padding: '2rem', borderRadius: '1rem' }}>
+      <form style={{ display: 'flex', gap: '1rem' }}>
+        <select className={styles.select}>
+          <option value="" disabled hidden>
+            Выберите дату
+          </option>
+
+          {data.map((day) => (
+            <option key={day.id} value={day.id}>
+              {day.date.toLocaleDateString()}
+            </option>
+          ))}
+        </select>
+      </form>
     </div>
   );
 };
+
 export default EventBooking;
