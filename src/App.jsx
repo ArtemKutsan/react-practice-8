@@ -7,11 +7,11 @@ function App() {
   return (
     <>
       <main>
-        <h1 className="container">React Practice 8</h1>
+        <h1 className="container">React Summary 4</h1>
 
         <section>
           <div className="container">
-            <h2>Задача 1: Бронирование билетов</h2>
+            <h2>Задача 1: Бронирование билетов V2</h2>
             <EventsProvider>
               <EventBooking />
             </EventsProvider>
